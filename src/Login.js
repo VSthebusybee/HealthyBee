@@ -1,12 +1,15 @@
 import * as React from 'react';
 import { View, Image, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
-
+import SignUp from './SignUp';
 const Login = ({navigation}) => {
   const [text, setText] = React.useState("");
     const handleLoginPress = () => {
         navigation.navigate('Home');
       };
+    const handleSignUpPress = () => {
+        navigation.navigate('SignUp');
+    }; 
   return (
     <View style={styles.container}>
       {/* Logo */}
@@ -37,6 +40,8 @@ const Login = ({navigation}) => {
           Login
          </Button>
           
+          <Text style={{textAlign:'center',marginTop:10}}>Don't have an account? <Text style={{color:'#0000ff'}} onPress={handleSignUpPress}>Sign Up</Text></Text>
+
       </View>
 
       {/* Social Links */}

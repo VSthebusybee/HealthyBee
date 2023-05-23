@@ -10,6 +10,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
 import FeedScreen from './src/FeedScreen';
 import ProfileScreen from './src/Profile';
+import SignUp from './src/SignUp';
 
 
 const Stack = createStackNavigator();
@@ -62,6 +63,7 @@ export default function App() {
       <Stack.Screen name="Login" component={Login} options={{ title: 'Login' }}/>
       <Stack.Screen name="Home" component={HomeScreen} options={{title:'Homes'}}/>
       <Stack.Screen name="Main" component={MainUI} />
+      <Stack.Screen name="SignUp" component={SignUp} />
     </Stack.Navigator>
   </NavigationContainer>
   );
